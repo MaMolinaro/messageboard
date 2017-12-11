@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { MessagesComponent } from './menssages.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, MessagesComponent
   ],
   imports: [
     BrowserModule
