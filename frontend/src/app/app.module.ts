@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { 
       MatButtonModule, 
@@ -10,6 +11,7 @@ import {
 
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './menssages.component';
+import { WebService } from './web.service';
 
 
 @NgModule({
@@ -23,9 +25,10 @@ import { MessagesComponent } from './menssages.component';
     MatCardModule, 
     MatInputModule,
     MatSnackBarModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [WebService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
