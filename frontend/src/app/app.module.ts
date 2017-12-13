@@ -12,11 +12,12 @@ import {
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './menssages.component';
 import { WebService } from './web.service';
+import { NewMessageComponent } from './new.message.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, MessagesComponent
+    AppComponent, MessagesComponent, NewMessageComponent
   ],
   imports: [
     BrowserModule, 
