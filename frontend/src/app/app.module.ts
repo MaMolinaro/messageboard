@@ -18,10 +18,16 @@ import { NewMessageComponent } from './new.message.component';
 import { HomeComponent } from './home.component';
 import { FormsModule } from '@angular/forms';
 
-var routers = [{
+var routers = [
+  {
   path: '',
   component: HomeComponent
-}];
+  },
+  {
+    path: 'messages',
+    component: MessagesComponent
+    }    
+];
 
 @NgModule({
   declarations: [
