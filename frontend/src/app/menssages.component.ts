@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { WebService } from './web.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'messages',
@@ -13,6 +15,9 @@ import { WebService } from './web.service';
     `
 })
 export class MessagesComponent {
-    constructor (private webService: WebService) {}
+    constructor (private webService: WebService, private route: ActivatedRoute) {}
 
+    ngOnInit() {
+        console.log(this.route.snapshot.params.name);
+    }
 }
