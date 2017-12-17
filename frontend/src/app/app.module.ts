@@ -11,13 +11,14 @@ import {
 
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './menssages.component';
+import { NavComponent } from './nav.component';
 import { WebService } from './web.service';
 import { NewMessageComponent } from './new.message.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent, MessagesComponent, NewMessageComponent
+    AppComponent, MessagesComponent, NewMessageComponent, NavComponent
   ],
   imports: [
     BrowserModule, 

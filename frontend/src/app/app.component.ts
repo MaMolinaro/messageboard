@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { MessagesComponent } from './menssages.component';
 import { NewMessageComponent } from './new.message.component';
+import { NavComponent } from './nav.component';
 
 
 @Component({
   selector: 'app-root',
   template: 
-    `<h1>New Message Board</h1>
+    `
+    <nav></nav>
     <new-message></new-message>
     <messages></messages>`,
   styleUrls: ['./app.component.css']
