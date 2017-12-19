@@ -16,13 +16,17 @@ import { NavComponent } from './nav.component';
 import { WebService } from './web.service';
 import { NewMessageComponent } from './new.message.component';
 import { HomeComponent } from './home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register.component';
 
 var routers = [
     {
         path: '',
         component: HomeComponent
+    },
+    {
+        path: 'messages',
+        component: MessagesComponent
     },
     {
         path: 'messages/:name',
@@ -48,7 +52,8 @@ var routers = [
     MatToolbarModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(routers)
+    ReactiveFormsModule,
+    RouterModule.forRoot(routers),
   ],
   providers: [WebService],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 
 @Component({
@@ -7,4 +8,20 @@ import { Component } from '@angular/core';
   templateUrl: 'register.component.html',
   styleUrls: ['./app.component.css']
 })
-export class RegisterComponent {}
+export class RegisterComponent {
+    form;
+
+    constructor(private fb: FormBuilder) {
+        this.form = fb.group({
+            firstName: '',
+            lastName: '',
+            email: '',
+            password: '',
+            confirmPassword: ''
+        })
+    }
+
+    onSubmit() {
+        console.log(this.form.value);
+    }
+}
