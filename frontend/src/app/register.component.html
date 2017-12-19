@@ -16,6 +16,8 @@
             <input style="width: 350px" type="password" [ngClass]="{'error': isValid('confirmPassword')}" matInput placeholder="Confirm Password" formControlName="confirmPassword">
         </mat-input-container>
         <br>
+        <span *ngIf="form.errors?.mismatchedFields">Password do not match</span>
+        <br>
         <button mat-raised-button color="primary">Register</button>
     </form>
 </mat-card>
