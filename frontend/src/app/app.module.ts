@@ -17,24 +17,26 @@ import { WebService } from './web.service';
 import { NewMessageComponent } from './new.message.component';
 import { HomeComponent } from './home.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register.component';
 
 var routers = [
-  {
-  path: '',
-  component: HomeComponent
-  },
-  {
-    path: 'messages',
-    component: MessagesComponent
+    {
+        path: '',
+        component: HomeComponent
     },
     {
-      path: 'messages/:name',
-      component: MessagesComponent
-      }  ];
+        path: 'messages/:name',
+        component: MessagesComponent
+    },
+    {
+        path: 'register',
+        component: RegisterComponent
+    }  
+  ];
 
 @NgModule({
   declarations: [
-    AppComponent, MessagesComponent, NewMessageComponent, NavComponent, HomeComponent
+    AppComponent, MessagesComponent, NewMessageComponent, NavComponent, HomeComponent, RegisterComponent
   ],
   imports: [
     BrowserModule, 
